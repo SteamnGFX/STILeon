@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Soluciones TI León - Contacto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../styles/Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../styles/css/contact/styles.css">
+	<script src="https://kit.fontawesome.com/da1d00de8b.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../styles/css/contact/util.css">
+	<link rel="stylesheet" type="text/css" href="../styles/css/contact/main.css">
+	<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body id="body" class="hidden">
+	<div class="spinner-wrapper">
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-blue">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="../images/STILogo White.png" height="64px"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html" aria-current="page"><i class="fas fa-home"></i>
+							Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../html/testimonios.html"><i class="fas fa-user"></i> Testimonios</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="tienda.html"><i class="fas fa-shop"></i> Tienda</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#Gaming"><i class="fas fa-gamepad"></i> Gaming</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#Contacto"><i class="fa-solid fa-envelope"></i> Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="../images/mail.png" alt="IMG">
+			</div>
+
+			<form action="https://formsubmit.co/b6738e1ccb51751dc032065143179b7b" method="post"
+				class="contact1-form validate-form" onsubmit="submitUserForm();">
+				<span id="contacto" class="contact1-form-title">
+					CONTÁCTO
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate="Nombre es requerido">
+					<input class="input1" type="text" name="Nombre" placeholder="Nombre">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate="Correo es requerido ejemplo: mail@dominio.com">
+					<input class="input1" type="mail" name="Correo" placeholder="Email">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate="Tema es requerido">
+					<input class="input1" type="text" name="Tema" placeholder="Tema">
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate="Mensaje es requerido">
+					<textarea class="input1" name="Mensaje" placeholder="Mensaje"></textarea>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn" onclick="">
+						<span>
+							Enviar mensaje
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+				<input type="hidden" name="_next" value="http://127.0.0.1:5500">
+				<input type="hidden" name="_subject" value="Nuevo mensaje de página!">
+				<input type="text" name="_honey" style="display:none">
+				<input type="hidden" name="_captcha" value="false">
+				<input type="hidden" name="_template" value="box">
+			</form>
+			<div class="w-100 d-flex justify-content-end catchaBox">
+				<div class="g-recaptcha" data-sitekey="6LfTSrQhAAAAAKxoiXL8znvyjEWkLaf0M4-ra6ZM"
+					data-callback="verifyCaptcha"></div>
+			</div>
+			<div class="w-100 d-flex justify-content-end errorMSG">
+				<div id="g-recaptcha-error"></div>
+			</div>
+
+		</div>
+	</div>
+	<footer class="text-white text-center text-lg-start bg-blue">
+		<div class="container p-4">
+			<div class="row mt-4">
+				<div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+					<h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
+
+					<p class="footerText">
+						Nos dedicamos a satisfacer las necesidades de nuestros clientes en el área de informática
+						ofreciendo un servicio global, como la venta de equipo, consumibles, pólizas de
+						mantenimiento preventivo, software y asesorías
+					</p>
+
+					<p class="footerText">
+						Estamos constantemente aprendiendo nuevas tecnologías para poder ofrecer un servicio
+						actualizado
+					</p>
+
+					<div class="mt-4">
+						<h5 class="text-uppercase mb-4">Síguenos</h5>
+						<a type="button" class="btn-social btn btn-light btn-lg"
+							href="https://www.facebook.com/SolucionesTILeon" target="_blank"><i
+								class="fab fa-facebook-f"></i></a>
+						<a type="button" class="btn-social btn btn-light btn-lg"
+							href="https://www.instagram.com/solucionestileon/" target="_blank"><i
+								class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+					<h5 class="text-uppercase mb-4 pb-1">BUSCAR ALGO</h5>
+
+					<div class="form-outline form-white mb-4">
+						<input type="text" id="formControlLg" class="form-control form-control-lg"
+							placeholder="Buscar Algo..." />
+					</div>
+
+					<ul class="fa-ul" style="margin-left: 1.65em;">
+						<li class="mb-3">
+							<span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Arboledas de
+								ibarrilla 903-A, México, León GTO</span>
+						</li>
+						<li class="mb-3">
+							<span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2"><a
+									class="correo"
+									href="mailto:ventas@Solucionestileonmx.com">ventas@Solucionestileonmx.com</a></span>
+						</li>
+						<li class="mb-3">
+							<span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 52 477 774
+								6105</span>
+						</li>
+						<li class="mb-3">
+							<span class="fa-li"><i class="fa-brands fa-whatsapp"></i></span><span class="ms-2">+ 52
+								477 575
+								0989</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+					<h5 class="text-uppercase mb-4">HORARIO</h5>
+
+					<table class="table text-center text-white">
+						<tbody class="fw-normal">
+							<tr>
+								<td>Lunes - Viernes:</td>
+								<td>8:30 am - 2:00 pm</td>
+							</tr>
+							<tr>
+								<td>Lunes - Viernes:</td>
+								<td>4:00 pm - 8:30 pm</td>
+							</tr>
+							<tr>
+								<td>Sábado:</td>
+								<td>8 am - 2 pm</td>
+							</tr>
+							<tr>
+								<td>Dómingo:</td>
+								<td>Cerrado</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+			© 2022 Copyright
+			<a class="text-white" href="https://Solucionestileonmx.com">Solucionestileonmx.com</a>
+		</div>
+	</footer>
+
+
+
+	<script src="../JS/jquery.min.js"></script>
+	<link rel="stylesheet" href="../styles/Bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="../styles/Bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="../styles/Bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="../JS/select2.min.js"></script>
+	<script src="../JS/jquery.min.js"></script>
+	<!--  
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+	-->
+	<script src="../JS/main.js"></script>
+
+</body>
+
+</html>

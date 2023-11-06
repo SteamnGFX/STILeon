@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Carrito  - Soluciones TI León</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/css/tienda.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <script type="text/javascript" src="../JS/jquery.min.js"></script>
+    <script type="text/javascript" src="../JS/script.js"></script>
+    <script defer src="../JS/stock.js"></script>
+    <script defer src="../JS/carrito.js"></script>
+    <script src="https://kit.fontawesome.com/da1d00de8b.js" crossorigin="anonymous"></script>
+    <script defer src="../JS/sweetalert2.all.min.js"></script>
+
+</head>
+
+<body id="body" class="hidden">
+    <div class="heading">
+        <h1 class="heading__title" style="padding-top: 5%; color: white;">TIENDA</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-blue">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../images/STILogo White.png" height="64px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" aria-current="page"><i class="fas fa-home"></i>
+                            Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonios.html"><i class="fas fa-user"></i> Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tienda.html"><i class="fas fa-shop"></i> Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-gamepad"></i> Gaming</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="heading">
+            <h1 class="heading__title" style="padding-top: 5%; color: white;">TIENDA</h1>
+        </div>
+    </div>
+
+    <div class="boxCarrito">
+        <div class="regresardiv">
+            <p class="regresar" id="volver">
+                < Volver a la tienda</p>
+        </div>
+        <h2 class="titleCarrito">PRODUCTOS</h2>
+        <hr>
+        <p>Items:<span id="contadorCarrito2">ningún elemento en el carrito</span></p>
+        <div class="row headCarritoMain">
+            <div class="col headCarrito">Imagen</div>
+            <div class="col headCarrito">Producto</div>
+            <div class="col headCarrito">Precio</div>
+            <div class="col headCarrito">Cantidad</div>
+            <div class="col headCarrito">Eliminar</div>
+        </div>
+
+        <main class="carrito" id="contenedor-carrito">
+
+        </main>
+        <hr>
+
+        <div class="row">
+            <div class="col-8">
+                <p class="nota"><u>NOTA</u>: Todos los articulos, cantidades y precios están sujetos a cambios sin
+                    previo aviso</p>
+
+            </div>
+            <div class="col-4">
+                <p class="total">Total: $<span id="precioTotal">0</span>.00 MXN</p>
+                <p class="total">Total: $<span id="precioTotal">0</span>.00 MXN</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center" style="padding-top: 3%;">
+            <button class="btn bg-danger" onclick="vaciarCarrito()" style="color:white; font-weight: 600;">
+                Vaciar carrito
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+            <button class="btn bg-pago" onclick="pagar()" style="color:white; font-weight: 600;">
+                Continuar con la compra
+                <i class="fa-solid fa-credit-card"></i>
+            </button>
+        </div>
+    </div>
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+
+    <footer class="text-white text-center text-lg-start bg-blue">
+        <div class="container p-4">
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
+
+                    <p>
+                        Nos dedicamos a satisfacer las necesidades de nuestros clientes en el área de informática
+                        ofreciendo un servicio global, como la venta de equipo, consumibles, pólizas de
+                        mantenimiento
+                        preventivo, software y asesorías
+                    </p>
+
+                    <p>
+                        Estamos constantemente aprendiendo nuevas tecnologías para poder ofrecer un servicio
+                        actualizado
+                    </p>
+
+                    <div class="mt-4">
+                        <h5 class="text-uppercase mb-4">Siguenos</h5>
+                        <a type="button" class="btn btn-floating btn-light btn-lg"
+                            href="https://www.facebook.com/SolucionesTILeon" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a type="button" class="btn btn-floating btn-light btn-lg"
+                            href="https://www.instagram.com/solucionestileon/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4 pb-1">BUSCAR ALGO</h5>
+
+                    <div class="form-outline form-white mb-4">
+                        <input type="text" id="formControlLg" class="form-control form-control-lg"
+                            placeholder="Buscar Algo..." />
+                    </div>
+
+                    <ul class="fa-ul" style="margin-left: 1.65em;">
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Arboledas de
+                                ibarrilla 903-A, México, León GTO</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2"><a
+                                    class="correo"
+                                    href="mailto:ventas@Solucionestileonmx.com">ventas@Solucionestileonmx.com</a></span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 52 477 774
+                                6105</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 52 477 575
+                                0989</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">HORARIO</h5>
+
+                    <table class="table text-center text-white">
+                        <tbody class="fw-normal">
+                            <tr>
+                                <td>Lunes - Viernes:</td>
+                                <td>8:30 am - 2:00 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Lunes - Viernes:</td>
+                                <td>4:00 pm - 8:30 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sábado:</td>
+                                <td>8 am - 2 pm</td>
+                            </tr>
+                            <tr>
+                                <td>Dómingo:</td>
+                                <td>Cerrado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright
+            <a class="text-white" href="https://Solucionestileonmx.com">Solucionestileonmx.com</a>
+        </div>
+    </footer>
+    </div>
+    <script type="text/javascript" src="../styles/Bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
