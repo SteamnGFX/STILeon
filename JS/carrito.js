@@ -194,7 +194,7 @@ const pagar = (prod) => {
         // cuerpo = "Hola, escribo para obtener más información de: " + concat + "con un total de: ";
         cuerpo = "Hola, escribo para obtener más información sobre la compra de:%0A%0A *PRODUCTOS* %0A" + concat + "%0A%0ACon un total de: " + "*$" + precioTotalSuma.toLocaleString('es-MX') + ".00 MXN*.";
     
-        window.location.href = "https://wa.me/524775876555?text=" + cuerpo;
+        window.location.href = "https://wa.me/524775750989?text=" + cuerpo;
     }
 
 }
